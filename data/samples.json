@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "03-product-cosmetics-duo",
+    "prompt": "Two frosted glass cosmetics bottles on a pale sand surface, hard afternoon light casting long shadows, minimal styling, commercial product photography",
+    "category": "Product",
+    "size": "1:1",
+    "resolution": "1K",
+    "model": "grok-imagine-1.5-apimart",
+    "cost": 0.015
+  },
+  {
+    "slug": "01-cyberpunk-motorbike",
+    "prompt": "Cyberpunk motorbike parked in a neon-lit underpass, rain on asphalt, magenta and cyan rim lights, cinematic still, shallow depth of field",
+    "category": "Cinematic",
+    "size": "16:9",
+    "resolution": "1K",
+    "model": "grok-imagine-1.5-apimart",
+    "cost": 0.015
+  },
+  {
+    "slug": "02-mythic-creature-concept",
+    "prompt": "Mythic forest creature concept art, antlered guardian covered in moss and small flowers, soft volumetric light through trees, painterly detail",
+    "category": "Concept art",
+    "size": "3:2",
+    "resolution": "1K",
+    "model": "grok-imagine-1.5-apimart",
+    "cost": 0.015
+  },
+  {
+    "slug": "04-retro-poster-travel",
+    "prompt": "Retro travel poster illustration of a coastal train route, flat colour blocks, textured paper grain, warm sunset palette, bold graphic composition",
+    "category": "Poster / graphic",
+    "size": "3:4",
+    "resolution": "1K",
+    "model": "grok-imagine-1.5-apimart",
+    "cost": 0.015
+  },
+  {
+    "slug": "05-gourmet-dessert",
+    "prompt": "Gourmet chocolate dessert with gold leaf on a dark ceramic plate, moody side light, shallow depth of field, fine dining food photography",
+    "category": "Food",
+    "size": "4:3",
+    "resolution": "1K",
+    "model": "grok-imagine-1.5-apimart",
+    "cost": 0.015
+  },
+  {
+    "slug": "06-fantasy-city-aerial",
+    "prompt": "Aerial view of a fantasy cliff city carved into stone terraces above a turquoise sea, tiny bridges and hanging gardens, cinematic haze, epic scale",
+    "category": "Environment",
+    "size": "16:9",
+    "resolution": "1K",
+    "model": "grok-imagine-1.5-apimart",
+    "cost": 0.015
+  }
+]

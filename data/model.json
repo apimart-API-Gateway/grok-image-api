@@ -1,0 +1,14 @@
+{
+  "id": "grok-imagine-1.5-apimart",
+  "alias": "grok-imagine-1.5-ext",
+  "official": "",
+  "source": "https://apimart.ai/en/pricing",
+  "extracted_at": "2026-09-17T10:23:22Z",
+  "prices": {
+    "default": {
+      "list": 0.01875,
+      "effective": 0.015
+    }
+  },
+  "official_prices": {}
+}
