@@ -1,8 +1,29 @@
 # Grok Image API (grok-imagine-1.5-apimart)
 
-Grok Image on APIMart is the async Grok Imagine route: text-to-image plus reference-based editing, five aspect ratios, and up to 10 images per request — the batch behaviour is the unusual part.
+<!-- conv-kit:v1 -->
 
-**Attributed entry points:** [Open Grok Image on APIMart](https://go.apimart.ai/k-1a274e) · [Current pricing](https://go.apimart.ai/k-4f6dcd) · [Get an API key](https://go.apimart.ai/k-a96fe3)
+<p align="center">
+  <img src="assets/badges/price.svg" alt="observed unit price"> <img src="assets/badges/billing.svg" alt="billing model"> <img src="assets/badges/compat.svg" alt="OpenAI-compatible endpoint">
+</p>
+
+<p align="center">
+  <img src="assets/03-product-cosmetics-duo.jpg" width="820" alt="Grok Imagine 1.5 (grok-imagine-1.5-apimart) output generated through APIMart">
+</p>
+
+> **$0.015 per image**, edits included — one OpenAI-compatible endpoint at `https://api.apimart.ai/v1`, no monthly plan required. *(observed 2026-09-17)*
+
+**[Get an API key](https://go.apimart.ai/k-a96fe3)** · **[Live pricing](https://go.apimart.ai/k-4f6dcd)** · **[Model page](https://go.apimart.ai/k-1a274e)** · [⚡ 60-second quickstart](#quickstart)
+
+**Why teams call Grok Imagine 1.5 (`grok-imagine-1.5-apimart`) through APIMart**
+
+- **One key, entire catalog.** The same `https://api.apimart.ai/v1` base URL and `Authorization` header reach Grok Imagine 1.5 (`grok-imagine-1.5-apimart`) and 300+ other image, video and language models — switch the `model` field, not your client.
+- **$1 minimum, pay as you go.** No subscription and no prepaid plan to size up front: top up from $1 and spend it on calls. There is no free quota to burn through first, so the price in this table is the price you pay.
+- **The charge comes back in the response.** Every call reports the amount billed (`cost` / `credits_cost`), so a spend number is read per call instead of guessed at month end.
+- **Async by design.** Submit, take the `task_id`, poll `GET /v1/tasks/{id}` — batching and retries are ordinary queue work, not a bespoke integration.
+
+<!-- /conv-kit:v1 -->
+
+Grok Image on APIMart is the async Grok Imagine route: text-to-image plus reference-based editing, five aspect ratios, and up to 10 images per request — the batch behaviour is the unusual part.
 
 ## Model id and routes
 
@@ -20,6 +41,20 @@ Result links are valid for 24 hours.
 | Output | List price | Effective price |
 | --- | --- | --- |
 | default | $0.0187 | $0.015 |
+
+<!-- conv-kit:v1:scale -->
+### What that costs at scale
+
+| Spend | Cost |
+| --- | --- |
+| 100 images | $1.50 |
+| 1000 images | $15.00 |
+| 10000 images | $150.00 |
+
+Linear at the observed per-unit rate, no volume discount assumed. Snapshot 2026-09-17; re-check the live table before committing a budget.
+<!-- /conv-kit:v1:scale -->
+
+
 <!-- pricing:model:end -->
 
 Prices are a snapshot; the [pricing page](https://go.apimart.ai/k-4f6dcd) and [`data/model.json`](data/model.json) are refreshed by
@@ -95,6 +130,19 @@ reported.
 
 Recipes and measured costs are also in [`data/samples.json`](data/samples.json).
 
+<!-- conv-kit:v1:fix -->
+## First-call troubleshooting
+
+| Symptom | Likely cause | Fix |
+| --- | --- | --- |
+| `401` / `invalid api key` | key missing, truncated, or a stray newline pasted into the header | Re-copy it from the console; the header is `Authorization: Bearer $APIMART_API_KEY` |
+| balance / credit error | the account has no balance | Top up from $1 in the console — there is no free quota to fall back on |
+| `429` | concurrent requests on one key | Back off, then retry the same request with the same `Idempotency-Key` |
+| `400` / model not found | wrong route for the id: the per-unit alias needs its `version`, the official id must not send one | Copy the exact `model` value from the route table above |
+| task ends `failed` | prompt rejected by the filter, or a reference image URL expired | Re-submit with a **new** `Idempotency-Key` and re-host the reference image |
+| result URL stops working | result links expire | Download the file as soon as the task reports `completed` |
+<!-- /conv-kit:v1:fix -->
+
 ## FAQ
 
 **What is the Grok Image API model id?**
@@ -122,6 +170,12 @@ Generated links are valid for 24 hours; download and store the output as part of
 - `grok image editing api`
 - `image generation api`
 - `ai image api`
+
+<!-- conv-kit:v1:cta -->
+---
+
+**Start with $1.** [Get an API key](https://go.apimart.ai/k-a96fe3) → [check live pricing](https://go.apimart.ai/k-4f6dcd) → [open Grok Imagine 1.5 (`grok-imagine-1.5-apimart`) in the model library](https://go.apimart.ai/k-1a274e). The first call is three steps: submit, poll `task_id`, read the charged amount off the response.
+<!-- /conv-kit:v1:cta -->
 
 ## Attributed links (how this repository is measured)
 
