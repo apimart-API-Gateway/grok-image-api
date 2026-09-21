@@ -41,20 +41,6 @@ Result links are valid for 24 hours.
 | Output | List price | Effective price |
 | --- | --- | --- |
 | default | $0.0187 | $0.015 |
-
-<!-- conv-kit:v1:scale -->
-### What that costs at scale
-
-| Spend | Cost |
-| --- | --- |
-| 100 images | $1.50 |
-| 1000 images | $15.00 |
-| 10000 images | $150.00 |
-
-Linear at the observed per-unit rate, no volume discount assumed. Snapshot 2026-09-17; re-check the live table before committing a budget.
-<!-- /conv-kit:v1:scale -->
-
-
 <!-- pricing:model:end -->
 
 Prices are a snapshot; the [pricing page](https://go.apimart.ai/k-4f6dcd) and [`data/model.json`](data/model.json) are refreshed by
