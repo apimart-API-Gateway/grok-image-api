@@ -40,7 +40,7 @@ Result links are valid for 24 hours.
 <!-- pricing:model:start -->
 | Output | List price | Effective price |
 | --- | --- | --- |
-| default | $0.0187 | $0.015 |
+| default | $0.02 | $0.015 |
 <!-- pricing:model:end -->
 
 Prices are a snapshot; the [pricing page](https://go.apimart.ai/k-4f6dcd) and [`data/model.json`](data/model.json) are refreshed by
